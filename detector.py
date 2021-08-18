@@ -87,37 +87,35 @@ def classifier(diam):
         return "Medium"
 
 
-# cam = cv2.VideoCapture(0)
-# img_name = ""
-# cont = False
-#
-# while True:
-#     ret, frame = cam.read()
-#
-#     # if there is an issue to open the webcam
-#     if not ret:
-#         print("failed to grab frame")
-#         break
-#
-#     cv2.imshow("test", frame)
-#     k = cv2.waitKey(1)
-#
-#     # press ESC button to cancel process
-#     if k % 256 == 27:
-#         print("Escape hit, closing...")
-#         break
-#
-#     # press SPACE button to capture image
-#     elif k % 256 == 32:
-#         img_name = "input.jpg"
-#         cv2.imwrite(img_name, frame)
-#         cont = True
-#         break
-#
-# cam.release()
-# cv2.destroyAllWindows()
-#
-# if cont:
-#     base(img_name)
+cam = cv2.VideoCapture(0)
+img_name = ""
+cont = False
 
-base("test1.jpg")
+while True:
+    ret, frame = cam.read()
+
+    # if there is an issue to open the webcam
+    if not ret:
+        print("failed to grab frame")
+        break
+
+    cv2.imshow("test", frame)
+    k = cv2.waitKey(1)
+
+    # press ESC button to cancel process
+    if k % 256 == 27:
+        print("Escape hit, closing...")
+        break
+
+    # press SPACE button to capture image
+    elif k % 256 == 32:
+        img_name = "input.jpg"
+        cv2.imwrite(img_name, frame)
+        cont = True
+        break
+
+cam.release()
+cv2.destroyAllWindows()
+
+if cont:
+    base(img_name)
