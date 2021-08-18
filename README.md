@@ -2,13 +2,14 @@
 Measuring size of objects using OpenCV library in Python
 
 Steps:
-Create Python project
 
-Install necessary libraries (Please refer requirements.txt)
+✅ Create Python project
 
-After run the program automatically run webcam
+✅ Install necessary libraries (Please refer requirements.txt)
 
-Then you can press SPACE button to capture image
+✅ After run the program automatically run webcam
+
+✅ Then you can press SPACE button to capture image and it will process automatically 
 
 Test1
 
